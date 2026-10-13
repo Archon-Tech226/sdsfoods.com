@@ -1,0 +1,995 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SDS Foods | South Indian Snacks & Sweets</title>
+<meta name="description" content="Discover traditional South Indian snacks, murukku, banana chips, mixture, podi, pickle and Mysore Pak at SDS Foods.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #FFF8EE;
+  --soft: #F1E8D9;
+  --ink: #263D2B;
+  --muted: #706E62;
+  --line: #E4D9C8;
+  --accent: #C66A43;
+  --accent-dark: #A94E2D;
+  --white: #FFFFFF;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+}
+
+h2 {
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  margin-bottom: 14px;
+}
+
+section {
+  padding: 95px 0;
+}
+
+.sub {
+  color: var(--muted);
+  max-width: 34em;
+  margin-bottom: 48px;
+}
+
+/* Header */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 248, 238, .96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 76px;
+}
+
+.logo {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .05em;
+}
+
+.logo i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-left: 4px;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: .92rem;
+  color: var(--muted);
+  transition: color .2s;
+}
+
+nav a:hover {
+  color: var(--accent-dark);
+}
+
+nav a.cta {
+  color: var(--white);
+  background: var(--ink);
+  padding: 10px 20px;
+  border-radius: 100px;
+}
+
+nav a.cta:hover {
+  background: var(--accent);
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 13px 26px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: .94rem;
+  text-decoration: none;
+  border: 1px solid var(--ink);
+  transition: background .2s, color .2s, transform .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn.solid {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.btn.solid:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn.ghost:hover {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Hero */
+
+.hero {
+  padding: 75px 0 100px;
+}
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--accent-dark);
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-size: .78rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(3.2rem, 6vw, 5.4rem);
+  margin-bottom: 24px;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.08rem;
+  max-width: 29em;
+  margin-bottom: 32px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 510px;
+  object-fit: cover;
+  border-radius: 200px 200px 24px 24px;
+  background: var(--soft);
+  display: block;
+}
+
+/* Image styling */
+
+.food-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+  background: var(--soft);
+  transition: transform .4s;
+}
+
+.card {
+  min-width: 0;
+}
+
+.card .image-wrap {
+  overflow: hidden;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  background: var(--soft);
+}
+
+.card:hover .food-image {
+  transform: scale(1.04);
+}
+
+/* Products */
+
+#products {
+  padding-top: 25px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px 30px;
+}
+
+.card .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.card h3 {
+  font-size: 1.65rem;
+}
+
+.card .price {
+  color: var(--accent-dark);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: .94rem;
+  margin-top: 6px;
+}
+
+/* Menu */
+
+#menu, #testimonials {
+  background: var(--soft);
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 65px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.row h3 {
+  font-size: 1.5rem;
+}
+
+.row small {
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.row .p {
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.note {
+  margin-top: 25px;
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+/* About */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 75px;
+  align-items: center;
+}
+
+.about-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 24px;
+  background: var(--soft);
+}
+
+.about p {
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.vals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 28px;
+  padding-top: 25px;
+  border-top: 1px solid var(--line);
+}
+
+.vals b {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.35rem;
+}
+
+.vals span {
+  color: var(--muted);
+  font-size: .87rem;
+}
+
+/* Testimonials */
+
+.quotes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 35px;
+}
+
+blockquote {
+  border-top: 2px solid var(--accent);
+  padding-top: 23px;
+}
+
+blockquote p {
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  line-height: 1.35;
+  margin-bottom: 20px;
+}
+
+blockquote cite {
+  font-style: normal;
+  font-size: .9rem;
+  color: var(--muted);
+}
+
+blockquote cite b {
+  color: var(--ink);
+}
+
+/* Contact */
+
+.contact {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 75px;
+}
+
+form {
+  display: grid;
+  gap: 20px;
+}
+
+label {
+  font-size: .88rem;
+  color: var(--muted);
+  display: grid;
+  gap: 6px;
+}
+
+input, textarea, select {
+  width: 100%;
+  font: inherit;
+  color: var(--ink);
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  background: transparent;
+  border-radius: 0;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-bottom: 2px solid var(--accent);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+form .btn {
+  justify-self: start;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+#ok {
+  display: none;
+  color: var(--ink);
+  background: #E7EEDB;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.info {
+  display: grid;
+  gap: 28px;
+  align-content: start;
+  padding-top: 8px;
+}
+
+.info b {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.45rem;
+}
+
+.info span, .info a {
+  color: var(--muted);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.info a:hover {
+  color: var(--accent-dark);
+}
+
+/* Footer */
+
+footer.site {
+  background: var(--ink);
+  color: #F6EBDD;
+  padding: 32px 0;
+  font-size: .88rem;
+}
+
+footer.site .wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+footer.site a {
+  color: #F6EBDD;
+  text-decoration: none;
+}
+
+/* Responsive */
+
+@media (max-width: 860px) {
+  section {
+    padding: 70px 0;
+  }
+
+  .hero .wrap, .about, .contact {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .hero-image {
+    height: 430px;
+    max-width: 480px;
+  }
+
+  .grid, .quotes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .menu {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  nav a:not(.cta) {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .wrap {
+    padding: 0 20px;
+  }
+
+  .hero {
+    padding-top: 48px;
+  }
+
+  .hero h1 {
+    font-size: 3.4rem;
+  }
+
+  .hero-image {
+    height: 350px;
+  }
+
+  .grid, .quotes {
+    grid-template-columns: 1fr;
+  }
+
+  .card h3 {
+    font-size: 1.6rem;
+  }
+
+  .vals {
+    gap: 18px;
+  }
+
+  .btn {
+    padding: 12px 19px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a href="#home" class="logo">SDS<i></i></a>
+
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About Us</a>
+      <a class="cta" href="#contact">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Authentic taste · Made with care</span>
+
+      <h1>Tradition, made fresh every day.</h1>
+
+      <p>
+        Discover the comforting taste of South Indian snacks and sweets.
+        From crispy murukku to rich Mysore Pak, every bite celebrates
+        the flavours of tradition.
+      </p>
+
+      <div class="btns">
+        <a class="btn solid" href="#products">Explore Our Range</a>
+        <a class="btn ghost" href="#contact">Place an Order</a>
+      </div>
+    </div>
+
+    <div>
+      <img
+        class="hero-image"
+        src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1000&q=85"
+        alt="Indian savoury snacks"
+        fetchpriority="high"
+      >
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="wrap">
+    <span class="eyebrow">Made for your cravings</span>
+    <h2>Our signature range</h2>
+    <p class="sub">
+      Explore savoury favourites, traditional spice blends and
+      delicious sweets for everyday moments and celebrations.
+    </p>
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="image-wrap">
+          <img class="food-image"
+            src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=800&q=85"
+            alt="Traditional Indian savoury snack"
+            loading="lazy">
+        </div>
+        <div class="top">
+          <h3>Crispy Murukku</h3>
+          <span class="price">₹120</span>
+        </div>
+        <p>Crunchy spirals made with rice flour, cumin and sesame.</p>
+      </article>
+
+      <article class="card">
+        <div class="image-wrap">
+          <img class="food-image"
+            src="https://images.unsplash.com/photo-1621447504864-d8686e12698c?auto=format&fit=crop&w=800&q=85"
+            alt="Golden crispy snack pieces"
+            loading="lazy">
+        </div>
+        <div class="top">
+          <h3>Banana Chips</h3>
+          <span class="price">₹140</span>
+        </div>
+        <p>Thin, golden Nendran-style chips for a satisfying crunch.</p>
+      </article>
+
+      <article class="card">
+        <div class="image-wrap">
+          <img class="food-image"
+            src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=85"
+            alt="Indian food with rich spices"
+            loading="lazy">
+        </div>
+        <div class="top">
+          <h3>Madras Mixture</h3>
+          <span class="price">₹110</span>
+        </div>
+        <p>A flavourful savoury mix inspired by classic South Indian snacks.</p>
+      </article>
+
+      <article class="card">
+        <div class="image-wrap">
+          <img class="food-image"
+            src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=85"
+            alt="A selection of aromatic spices"
+            loading="lazy">
+        </div>
+        <div class="top">
+          <h3>Idli Podi</h3>
+          <span class="price">₹90</span>
+        </div>
+        <p>A traditional roasted lentil and chilli spice blend.</p>
+      </article>
+
+      <article class="card">
+        <div class="image-wrap">
+          <img class="food-image"
+            src="https://images.unsplash.com/photo-1472476443507-c7a5948772fc?auto=format&fit=crop&w=800&q=85"
+            alt="Fresh ingredients arranged for cooking"
+            loading="lazy">
+        </div>
+        <div class="top">
+          <h3>Mango Pickle</h3>
+          <span class="price">₹150</span>
+        </div>
+        <p>A tangy traditional favourite with oil and aromatic spices.</p>
+      </article>
+
+      <article class="card">
+        <div class="image-wrap">
+          <img class="food-image"
+            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=85"
+            alt="Sweet dessert arranged for serving"
+            loading="lazy">
+        </div>
+        <div class="top">
+          <h3>Ghee Mysore Pak</h3>
+          <span class="price">₹260</span>
+        </div>
+        <p>A rich sweet inspired by the traditional flavours of South India.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="wrap">
+    <span class="eyebrow">Something for everyone</span>
+    <h2>Our menu</h2>
+    <p class="sub">
+      Browse our demo selection of traditional snacks, spice blends and sweets.
+    </p>
+
+    <div class="menu">
+      <div class="row">
+        <div>
+          <h3>Crispy Murukku</h3>
+          <small>Savoury · 250 g</small>
+        </div>
+        <span class="p">₹120</span>
+      </div>
+
+      <div class="row">
+        <div>
+          <h3>Idli Podi</h3>
+          <small>Spice blend · 200 g</small>
+        </div>
+        <span class="p">₹90</span>
+      </div>
+
+      <div class="row">
+        <div>
+          <h3>Banana Chips</h3>
+          <small>Savoury · 250 g</small>
+        </div>
+        <span class="p">₹140</span>
+      </div>
+
+      <div class="row">
+        <div>
+          <h3>Mango Pickle</h3>
+          <small>Pickle · 300 g</small>
+        </div>
+        <span class="p">₹150</span>
+      </div>
+
+      <div class="row">
+        <div>
+          <h3>Madras Mixture</h3>
+          <small>Savoury · 250 g</small>
+        </div>
+        <span class="p">₹110</span>
+      </div>
+
+      <div class="row">
+        <div>
+          <h3>Ghee Mysore Pak</h3>
+          <small>Sweet · 250 g</small>
+        </div>
+        <span class="p">₹260</span>
+      </div>
+    </div>
+
+    <p class="note">Demo prices only. Confirm actual prices before ordering.</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about">
+
+    <img class="about-image"
+      src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=85"
+      alt="A welcoming home kitchen"
+      loading="lazy">
+
+    <div>
+      <span class="eyebrow">Our story</span>
+      <h2>About SDS Foods</h2>
+
+      <p>
+        At SDS Foods, we celebrate the familiar flavours of South Indian
+        kitchens and the joy of sharing delicious food with family and friends.
+      </p>
+
+      <p>
+        Our range brings together traditional snack favourites, spice blends
+        and sweets, inspired by the recipes and food culture we love.
+      </p>
+
+      <div class="vals">
+        <div>
+          <b>Tradition</b>
+          <span>Inspired by heritage</span>
+        </div>
+        <div>
+          <b>Flavour</b>
+          <span>Classic favourites</span>
+        </div>
+        <div>
+          <b>Care</b>
+          <span>Made for sharing</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="wrap">
+    <span class="eyebrow">Customer love</span>
+    <h2>Made for sharing</h2>
+    <p class="sub">
+      Good food brings people together. Make your own SDS Foods
+      customer stories part of this section.
+    </p>
+
+    <div class="quotes">
+      <blockquote>
+        <p>“A familiar taste that brings back memories of home.”</p>
+        <cite><b>Customer story</b></cite>
+      </blockquote>
+
+      <blockquote>
+        <p>“Traditional treats make every family gathering special.”</p>
+        <cite><b>Customer story</b></cite>
+      </blockquote>
+
+      <blockquote>
+        <p>“A lovely selection for sharing with friends and family.”</p>
+        <cite><b>Customer story</b></cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap contact">
+
+    <div>
+      <span class="eyebrow">We would love to hear from you</span>
+      <h2>Let's talk food.</h2>
+      <p class="sub">
+        Interested in our products or planning an order?
+        Send us a message with your requirements.
+      </p>
+
+      <form id="f">
+        <label>
+          Your name
+          <input name="name" autocomplete="name" required>
+        </label>
+
+        <label>
+          Phone or email
+          <input name="contact" required>
+        </label>
+
+        <label>
+          Choose a product
+          <select name="product">
+            <option>Not sure yet</option>
+            <option>Crispy Murukku</option>
+            <option>Banana Chips</option>
+            <option>Madras Mixture</option>
+            <option>Idli Podi</option>
+            <option>Mango Pickle</option>
+            <option>Ghee Mysore Pak</option>
+          </select>
+        </label>
+
+        <label>
+          Your message
+          <textarea name="msg" placeholder="Tell us what you need"></textarea>
+        </label>
+
+        <button class="btn solid" type="submit">Send via WhatsApp</button>
+
+        <p id="ok" role="status" aria-live="polite">
+          Your WhatsApp message is ready to send.
+        </p>
+      </form>
+    </div>
+
+    <div class="info">
+      <div>
+        <b>Phone / WhatsApp</b>
+        <a href="#contact">Add your business number</a>
+      </div>
+
+      <div>
+        <b>Email</b>
+        <a href="#contact">Add your business email</a>
+      </div>
+
+      <div>
+        <b>Address</b>
+        <span>Add your business address, Tamil Nadu, India</span>
+      </div>
+
+      <div>
+        <b>Business hours</b>
+        <span>Monday to Saturday · Update your actual timings</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>&copy; 2026 SDS Foods. All rights reserved.</span>
+    <a href="#home">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+const form = document.getElementById("f");
+const statusMessage = document.getElementById("ok");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const data = new FormData(form);
+  const name = data.get("name").trim();
+  const contact = data.get("contact").trim();
+  const product = data.get("product");
+  const message = data.get("msg").trim();
+
+  // Replace this with your actual WhatsApp number.
+  // Include country code without + or spaces.
+  const whatsappNumber = "91XXXXXXXXXX";
+
+  if (whatsappNumber.includes("X")) {
+    statusMessage.style.display = "block";
+    statusMessage.textContent =
+      "Please add your real WhatsApp number in the website code before using this form.";
+    return;
+  }
+
+  const text =
+    "Hello SDS Foods!%0A%0A" +
+    "Name: " + encodeURIComponent(name) + "%0A" +
+    "Contact: " + encodeURIComponent(contact) + "%0A" +
+    "Product: " + encodeURIComponent(product) + "%0A" +
+    "Message: " + encodeURIComponent(message);
+
+  const url =
+    "https://wa.me/" + whatsappNumber + "?text=" + text;
+
+  window.open(url, "_blank", "noopener,noreferrer");
+
+  statusMessage.style.display = "block";
+  statusMessage.textContent =
+    "WhatsApp opened. Review your message and press Send.";
+
+});
+</script>
+
+</body>
+</html>
